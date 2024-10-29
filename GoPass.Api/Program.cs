@@ -20,6 +20,7 @@ using GoPass.Application.Services.Validations.Classes;
 using GoPass.API.Middlewares;
 using GoPass.Application.Utilities.Assemblers.Interfaces;
 using GoPass.Application.Utilities.Assemblers.Classes;
+using GoPass.ExternalIntegrations.Payments;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -124,6 +125,7 @@ builder.Services.AddScoped<IAesGcmCryptoService, AesGcmCryptoService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<IServiceFacade, ServiceFacade>();
+builder.Services.AddScoped<IPaymentService, MercadoPagoService>();
 
 //Singleton ???? No sabemos que pasa y si alguno rompe la app generando un bug sin devolver una Exception
 builder.Services.AddSingleton<ITemplateService, TemplateService>();

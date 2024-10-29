@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GoPass.Application\GoPass.Application.csproj" />
+    <ProjectReference Include="..\GoPass.ExternalIntegrations\GoPass.ExternalIntegrations.csproj" />
   </ItemGroup>
 
 </Project>
